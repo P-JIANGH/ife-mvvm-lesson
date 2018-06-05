@@ -1,14 +1,16 @@
 const path = require('path');
-const prod = require('./enviorment/enviorment.prod');
 
 module.exports = {
-    mode: prod ? 'production' : 'development',  // process.env.NODE_ENV
-    devtool: prod ? 'eval-source-map' : 'eval',
+    devtool: process.env.NODE_ENV === 'production' ? 'eval-source-map' : 'eval',
     entry: {
-        main: './src/index.js',
+        main: './app/src/index.js',
+        index: './app/index.html',
+    },
+    devServer: {
+        contentBase: './dist'
     },
     output: {
-        filename: '[name].bundle.js',
+        filename: '[ext]' === 'js' ? '[name].bundle.[ext]' : '[name].[ext]',
         path: path.resolve(__dirname, 'dist'),
     },
     module: {

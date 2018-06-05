@@ -6,7 +6,7 @@
   "scripts": {
     "dev": "",
     "test": "npm test",
-    "build": "webpack"
+    "build": "webpack --mode=development"
   },
   "keywords": [
     "ife",
