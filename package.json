@@ -1,0 +1,16 @@
+{
+  "name": "san-helloworld",
+  "version": "0.0.0",
+  "description": "百度san培训实战项目",
+  "main": "index.html",
+  "scripts": {
+    "test": "npm test"
+  },
+  "keywords": [
+    "ife",
+    "san",
+    "mvvm"
+  ],
+  "author": "P-JIANGH",
+  "license": "ISC"
+}
