@@ -15,15 +15,20 @@
   ],
   "author": "P-JIANGH",
   "license": "ISC",
+  "dependencies": {
+    "lodash": "^4.17.10",
+    "san": "^3.6.0"
+  },
   "devDependencies": {
+    "babel-core": "^6.26.3",
+    "babel-loader": "^7.1.4",
+    "babel-preset-env": "^1.7.0",
     "css-loader": "^0.28.11",
     "import-local": "^1.0.0",
     "resolve-from": "^4.0.0",
+    "san-loader": "0.0.7",
     "style-loader": "^0.21.0",
     "webpack": "^4.10.2",
     "webpack-cli": "^3.0.2"
-  },
-  "dependencies": {
-    "lodash": "^4.17.10"
   }
 }
