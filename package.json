@@ -4,9 +4,9 @@
   "description": "百度san培训实战项目",
   "private": true,
   "scripts": {
-    "dev": "",
-    "test": "npm test",
-    "build": "webpack --mode=development"
+    "dev": "webpack-dev-server --mode=development",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "webpack --mode=production"
   },
   "keywords": [
     "ife",
@@ -16,19 +16,25 @@
   "author": "P-JIANGH",
   "license": "ISC",
   "dependencies": {
+    "babel-runtime": "^6.26.0",
     "lodash": "^4.17.10",
     "san": "^3.6.0"
   },
   "devDependencies": {
     "babel-core": "^6.26.3",
     "babel-loader": "^7.1.4",
+    "babel-plugin-transform-runtime": "^6.23.0",
     "babel-preset-env": "^1.7.0",
+    "clean-webpack-plugin": "^0.1.19",
     "css-loader": "^0.28.11",
+    "html-loader": "^0.5.5",
+    "html-webpack-plugin": "^3.2.0",
     "import-local": "^1.0.0",
     "resolve-from": "^4.0.0",
     "san-loader": "0.0.7",
     "style-loader": "^0.21.0",
     "webpack": "^4.10.2",
-    "webpack-cli": "^3.0.2"
+    "webpack-cli": "^3.0.2",
+    "webpack-dev-server": "^3.1.4"
   }
 }
