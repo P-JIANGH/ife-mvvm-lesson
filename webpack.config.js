@@ -26,7 +26,8 @@ module.exports = {
                         presets: ['babel-preset-env'],
                         plugins: ['babel-plugin-transform-runtime'],
                     }
-            } },
+                }
+            },
             { test: /\.css$/, use: ['style-loader', 'css-loader'] },
             { test: /\.san$/, loader: 'san-loader' },
         ],
