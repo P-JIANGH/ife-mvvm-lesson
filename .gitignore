@@ -1,3 +1,4 @@
 # ignore output and cache folder
 /.cache/
+/dist/
 /node_modules/
