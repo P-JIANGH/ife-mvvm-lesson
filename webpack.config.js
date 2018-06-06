@@ -4,9 +4,9 @@ const CleanWebpackPlugin = require('clean-webpack-plugin');
 const webpack = require('webpack');
 
 module.exports = {
-    devtool: process.env.NODE_ENV === 'production' ? 'eval-source-map' : 'eval',
+    devtool: process.env.NODE_ENV === 'production' ? 'source-map' : 'eval',
     entry: {
-        main: './app/src/index.js',
+        main: './app/index.js',
     },
     devServer: {
         contentBase: './dist',
@@ -53,4 +53,4 @@ module.exports = {
                 : 'san/dist/san.dev.js'
         }
     }
-}
+};
