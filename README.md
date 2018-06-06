@@ -2,7 +2,9 @@
 
 ## 1.2 用webpack4 / parcel快速搭建开发san helloworld
 
-### 使用`[webpack4](https://webpack.docschina.org/)`搭建环境
+### 使用`webpack4`搭建环境
+
+[webpack4中文官网](https://webpack.docschina.org/)
 
 依据`process.env.NODE_ENV === 'production'`区分开发模式还是生产模式，两模式对应不同的`devtool`选项
 
