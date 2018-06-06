@@ -83,3 +83,28 @@ css文件的话，网上的建议是同时使用style-loader和css-loader
 至少基础知识我掌握了
 
 以上
+
+## 2.1 数据操作
+
+### 基础表达式写法
+
+双向绑定 `{= exp =}` > 双向绑定仅支持普通变量和属性访问表达式，否则可能导致不可预测的问题。 -- San
+
+插值 `{{ exp }}` 本身为表达式，可使用类似angular的管道操作符，San中称为过滤器
+
+处理事件使用`on-`前缀，例如点击事件：`on-click="reset"`
+
+dataTypes用于验证数据类型，据说只能在开发模式下使用
+
+initData为初始化数据，为function
+
+数据操作相关使用`this.data`
+
+```js
+    this.data.set('key', value);
+    this.data.get('key');
+    this.data.merge('key', value);
+    ...
+```
+
+以上
