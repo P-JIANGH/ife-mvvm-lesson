@@ -4,7 +4,7 @@ const CleanWebpackPlugin = require('clean-webpack-plugin');
 const webpack = require('webpack');
 
 module.exports = {
-  devtool: process.env.NODE_ENV === 'production' ? 'source-map' : 'eval',
+  devtool: process.env.NODE_ENV === 'production' ? 'eval-source-map' : 'eval',
   entry: {
     main: './app/index.js',
   },
@@ -29,7 +29,14 @@ module.exports = {
           }
         }
       },
-      { test: /\.css$/, use: ['style-loader', 'css-loader'] },
+      {
+        test: /\.css$/,
+        exclude: /(node_modules)/, 
+        use: [
+          'style-loader',
+          { loader: 'css-loader', options: { modules: true } },
+        ]
+      },
       { test: /\.san$/, loader: 'san-loader' },
     ],
   },

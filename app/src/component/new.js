@@ -1,22 +1,10 @@
 import san, { DataTypes } from 'san';
+import className from '../../style/style.css';
 
 var newApp = san.defineComponent({
   template: `
     <div>
-      <div>
-        <input type="text" placeholder="姓名（string）" value="{= name =}" />
-        <input type="text" placeholder="年龄（number）" value="{= age =}" />
-        <input type="text" placeholder="简介（string）" value="{= des =}" />
-      </div>
-      <div style="display: inline-block; width: 200px;">
-        <div style="margin: 20px 0;">
-        信息：<button on-click="reset" style="margin-left: 60px;">移除信息</button>
-        </div>
-        <div>姓名：{{name || '________'}}</div>
-        <div>年龄：{{age || '________'}}</div>
-        <div>简介：{{des || '________'}}</div>
-      </div>
-      
+      <div class="${className.text}"><button>添加</button>123</div>
     </div>
   `,
   dataTypes: {
