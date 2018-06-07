@@ -1,12 +1,10 @@
 import san, { DataTypes } from 'san';
-import className from '../../style/style.css';
+import className from './new.css';
+import template from './new.html';
 
 var newApp = san.defineComponent({
-  template: `
-    <div>
-      <div class="${className.text}"><button>添加</button>123</div>
-    </div>
-  `,
+  template,
+
   dataTypes: {
     name: DataTypes.string,
     age: DataTypes.number,
@@ -18,6 +16,7 @@ var newApp = san.defineComponent({
       name: null,
       age: null,
       des: null,
+      className,
     };
   },
 
