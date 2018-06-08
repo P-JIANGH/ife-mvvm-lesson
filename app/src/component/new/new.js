@@ -2,6 +2,10 @@ import san, { DataTypes } from 'san';
 import className from './new.css';
 import template from './new.html';
 
+enum CHECK_TYPE {
+  ERR = -1, YET, OK
+}
+
 var newApp = san.defineComponent({
   template,
 
