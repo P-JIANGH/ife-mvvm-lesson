@@ -7,6 +7,7 @@
         "worker": true,
         "serviceworker": true
     },
+    "parser": "babel-eslint",
     "extends": "eslint:recommended",
     "parserOptions": {
         "sourceType": "module",
@@ -14,7 +15,8 @@
             "arrowFunctions": true,
             "forOf": true,
             "generators": true,
-            "modules": true
+            "modules": true,
+            "classes": true
         },
         "ecmaVersion": 2018
     },

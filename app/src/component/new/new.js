@@ -1,31 +1,37 @@
-import san, { DataTypes } from 'san';
+import { Component } from 'san';
 import className from './new.css';
 import template from './new.html';
 
-var newApp = san.defineComponent({
-  template,
+export default class NewApp extends Component {
 
-  dataTypes: {
-    name: DataTypes.string,
-    age: DataTypes.number,
-    des: DataTypes.string,
-  },
+  constructor(options) {
+    super(options);
+  }
+  
+  static template = template;
 
-  initData: function () {
+  initData () {
     return {
-      name: null,
-      age: null,
-      des: null,
+      infos: [
+        { name: '张三', status: 1 },
+        { name: '李四', status: -1 },
+        { name: '王五', status: 0 },
+        { name: '赵六', status: 0 },
+        { name: '孙七', status: 0 },
+      ],
       className,
     };
-  },
-
-  // 处理点击事件，重置输入
-  reset() {
-    this.data.set('name', null);
-    this.data.set('age', null);
-    this.data.set('des', null);
   }
-});
 
-export default newApp;
+  addInfo() {
+    this.data.push('infos', { name: '新人', status: 0 });
+  }
+
+  delInfo(index) {
+    this.data.removeAt('infos', index);
+  }
+
+  updStatus(index) {
+    this.data.set(`infos[${index}].status`, 1);
+  }
+}

@@ -1,13 +1,20 @@
 <div>
-  <div><button>添加</button></div>
+  <div><button on-click="addInfo">添加</button></div>
   <table>
     <tr>
       <th>姓名</th>
       <th>审核状态</th>
       <th>操作</th>
     </tr>
-    <tr >
-      <td></td>
+    <tr s-for="info, index in infos">
+      <td class="{{className.col}}">{{info.name}}</td>
+
+      <td class="{{className.col}}" s-if="info.status === 0">待审核</td>
+      <td class="{{className.col}}" s-elif="info.status === 1">合格</td>
+      <td class="{{className.col}}" s-else>不合格</td>
+
+      <td class="{{className.col}}" s-if="info.status === 0"><button class="{{className['col-button']}}" on-click="updStatus(index)">审核</button></td>
+      <td class="{{className.col}}" s-else><button class="{{className['col-button']}}" on-click="delInfo(index)">删除</button></td>
     </tr>
   </table>
 </div>
