@@ -110,3 +110,22 @@ initData为初始化数据，为function
 ```
 
 以上
+
+## 2.2 条件和循环
+
+### 条件 `<td s-if="info.status === 0">待审核</td>`
+
+### 循环 `<tr s-for="info, index in infos">`
+
+### 数组操作
+
+```js
+this.data.push('key', item);
+this.data.set(`arr[${index}].key`, value);
+this.data.removeAt('arr', index);
+```
+
+可以在循环中声明一个索引，在`on-click`执行时将索引传进去（传值）。
+也可以传`$event`，事件对象
+
+以上
