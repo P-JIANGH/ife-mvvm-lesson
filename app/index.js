@@ -1,4 +1,4 @@
-import NewApp from './src/component/new/new';
+import HighestLevel from './src/component/highest-level/highest-level';
 
-var app = new NewApp();
+var app = new HighestLevel();
 app.attach(document.body);
