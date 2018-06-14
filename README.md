@@ -129,3 +129,18 @@ this.data.removeAt('arr', index);
 也可以传`$event`，事件对象
 
 以上
+
+## 2.3
+
+课程持续时间比较短，很遗憾
+
+## 2.4 事件处理
+
+系统事件或者自定义事件可以使用`on-`前缀绑定上一个事件
+
+```html
+<input type="text" value="{= message =}"><button  on-click="handleClick">通知父组件</button>
+<new on-message="handleMessage"></new>
+```
+
+自定义事件的事件名由子组件的`fire`函数的第一个参数决定
