@@ -109,6 +109,8 @@ initData为初始化数据，为function
     ...
 ```
 
+[demo](https://p-jiangh.github.io/ife-mvvm-lesson/demos/2.1/index.html)
+
 以上
 
 ## 2.2 条件和循环
@@ -128,6 +130,8 @@ this.data.removeAt('arr', index);
 可以在循环中声明一个索引，在`on-click`执行时将索引传进去（传值）。
 也可以传`$event`，事件对象
 
+[demo](https://p-jiangh.github.io/ife-mvvm-lesson/demos/2.2/index.html)
+
 以上
 
 ## 2.3
@@ -144,3 +148,5 @@ this.data.removeAt('arr', index);
 ```
 
 自定义事件的事件名由子组件的`fire`函数的第一个参数决定
+
+[demo](https://p-jiangh.github.io/ife-mvvm-lesson/demos/2.4/index.html)
